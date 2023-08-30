@@ -1,0 +1,4 @@
+FROM {{ hailgenetics_hail_image.image }}
+
+COPY hail/python/dev/pinned-requirements.txt dev-requirements.txt
+RUN hail-pip-install -r dev-requirements.txt
